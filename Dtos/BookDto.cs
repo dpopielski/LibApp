@@ -10,13 +10,13 @@ namespace LibApp.Dtos
 {
     public class BookDto
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
 
         public byte GenreId { get; set; }
-        public GenreTypeDto Genre { get; set; }
+        public GenreTypeDto  Genre { get; set; }
     }
 }

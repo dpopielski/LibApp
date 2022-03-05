@@ -1,6 +1,6 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using LibApp.Models;
- namespace LibApp.Interfaces
+namespace LibApp.Interfaces
 {
     public interface IBookRepository
     {
@@ -12,5 +12,4 @@ using LibApp.Models;
         public void Save();
     }
 }
-
 

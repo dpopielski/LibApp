@@ -13,16 +13,16 @@
 
 <table id="books" class="table table-bordered table-hover">
     <thead>
-        <tr>
-            <th>Book</th>
-            <th>Genre</th>
-            <th>Delete</th>
-        </tr>
+    <tr>
+        <th>Book</th>
+        <th>Genre</th>
+        <th>Delete</th>
+    </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
-@section Scripts
+@section Scripts 
 {
     <script>
         $(document).ready(function () {
@@ -44,9 +44,9 @@
                     {
                         data: "id",
                         render: function (data) {
-
+                            
                             return "<button class='btn btn-secondary js-delete' data-book-id=" + data + ">Delete</button>";
-
+                            
                         }
                     }
                 ]
@@ -87,5 +87,5 @@
                 });
             });
         })
-    </script>
+</script>
 }

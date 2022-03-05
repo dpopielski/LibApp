@@ -8,12 +8,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using LibApp.Models;
 using Microsoft.Extensions.DependencyInjection;
+using System.Web;
 using Microsoft.AspNetCore.Identity;
 
 namespace LibApp
 {
     public class Program
     {
+        
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
@@ -28,6 +30,15 @@ namespace LibApp
 
             host.Run();
         }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+        
+                });
+
         private static async Task CreateRoles(IServiceProvider serviceProvider)
         {
             //initializing custom roles 
@@ -46,13 +57,6 @@ namespace LibApp
                 }
             }
         }
-
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
     }
+
 }

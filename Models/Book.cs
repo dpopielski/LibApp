@@ -9,24 +9,26 @@ namespace LibApp.Models
 {
     public class Book
     {
-		[DatabaseGenerated(DatabaseGeneratedOption.None)]
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
-		[Required(ErrorMessage = "Please enter name")]
+		[Required(ErrorMessage = "Name is required")]
 		[StringLength(255)]
 		public string Name { get; set; }
-		[Required(ErrorMessage = "Please enter author name")]
-		[StringLength(255)]
+		[Required(ErrorMessage = "Author name is required")]
 		public string AuthorName { get; set; }
-		public Genre Genre { get; set; }
-		[Required(ErrorMessage = "Please select Genre")]
-		public byte GenreId { get; set; }
+		[Required(ErrorMessage = "Genre is required")]
 		public DateTime DateAdded { get; set; }
-		[Required(ErrorMessage = "Please enter data")]
+		[Required]
 		public DateTime ReleaseDate { get; set; }
 		[Range(1,20)]
-		[Required(ErrorMessage = "Please enter number")]
+		[Required(ErrorMessage = "This field is required")]
 		public int NumberInStock { get; set; }
+		[Required]
 		public int NumberAvailable { get; set; }
+		[Required]
+		public Genre Genre { get; set; }
+		[Required]
+		public byte GenreId { get; set; }
 	}
       
 }

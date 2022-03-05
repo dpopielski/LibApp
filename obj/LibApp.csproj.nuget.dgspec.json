@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcin\\Desktop\\GIT\\LibApp_Gr5\\LibApp\\LibApp.csproj": {}
+    "C:\\Users\\damia\\source\\repos\\LibApp\\LibApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcin\\Desktop\\GIT\\LibApp_Gr5\\LibApp\\LibApp.csproj": {
+    "C:\\Users\\damia\\source\\repos\\LibApp\\LibApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcin\\Desktop\\GIT\\LibApp_Gr5\\LibApp\\LibApp.csproj",
+        "projectUniqueName": "C:\\Users\\damia\\source\\repos\\LibApp\\LibApp.csproj",
         "projectName": "LibApp",
-        "projectPath": "C:\\Users\\Marcin\\Desktop\\GIT\\LibApp_Gr5\\LibApp\\LibApp.csproj",
-        "packagesPath": "C:\\Users\\Marcin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcin\\Desktop\\GIT\\LibApp_Gr5\\LibApp\\obj\\",
+        "projectPath": "C:\\Users\\damia\\source\\repos\\LibApp\\LibApp.csproj",
+        "packagesPath": "C:\\Users\\damia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\damia\\source\\repos\\LibApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Marcin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,15 +45,23 @@
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.1.1, )"
+              "version": "[11.0.0, )"
             },
             "Bootbox.JS": {
               "target": "Package",
               "version": "[5.5.2, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.7, )"
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -62,7 +73,11 @@
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.9, )"
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
@@ -75,6 +90,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[5.0.9, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "datatables.net": {
               "target": "Package",
@@ -95,12 +114,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -109,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

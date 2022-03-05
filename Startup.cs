@@ -12,10 +12,14 @@ using LibApp.Interfaces;
 using LibApp.Repositories;
 using System.Threading.Tasks;
 
+
+
 namespace LibApp
 {
     public class Startup
     {
+        //private IServiceProvider serviceProvider;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -69,7 +73,13 @@ namespace LibApp
                 endpoints.MapRazorPages();
             });
             
+
+            
         }
+
+        
+
+
         
     }
 }

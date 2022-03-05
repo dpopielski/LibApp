@@ -4,14 +4,16 @@ using LibApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220125193030_AddDataToCustomerTable")]
+    partial class AddDataToCustomerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,30 +57,6 @@ namespace LibApp.Data.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 5,
-                            AuthorName = "Krzysztof Krawczyk",
-                            DateAdded = new DateTime(2000, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GenreId = (byte)2,
-                            Name = "Asp.Net",
-                            NumberAvailable = 0,
-                            NumberInStock = 0,
-                            ReleaseDate = new DateTime(1999, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            AuthorName = "Krzysztof Krawczyk",
-                            DateAdded = new DateTime(2000, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GenreId = (byte)1,
-                            Name = "Parostatek",
-                            NumberAvailable = 0,
-                            NumberInStock = 0,
-                            ReleaseDate = new DateTime(1999, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("LibApp.Models.Customer", b =>
@@ -122,7 +100,7 @@ namespace LibApp.Data.Migrations
                             Id = 2,
                             Birthdate = new DateTime(2002, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             HasNewsletterSubscribed = false,
-                            MembershipTypeId = (byte)2,
+                            MembershipTypeId = (byte)1,
                             Name = "Kamil Stoch"
                         },
                         new
@@ -130,7 +108,7 @@ namespace LibApp.Data.Migrations
                             Id = 3,
                             Birthdate = new DateTime(2003, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             HasNewsletterSubscribed = false,
-                            MembershipTypeId = (byte)3,
+                            MembershipTypeId = (byte)1,
                             Name = "Dawid Kubacki"
                         });
                 });
